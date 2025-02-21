@@ -15,6 +15,72 @@
   -ms-content-zooming: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+  /* Styling for header */
+  .header {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+      background-color: #fff5d7;
+      color: rgb(0, 0, 0);
+      padding: 12px 0;
+      font-weight: 600;
+      width: 100%;
+    
+  }
+
+  header h1 {
+      margin: 0;
+      font-weight: 600; /* Heavier font for heading */
+  }
+
+  header p {
+      margin: 5px 0;
+  }
+
+  /* Styling for footer */
+  footer p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+      background-color: #fff5d7;
+      color: rgb(0, 0, 0);
+      padding: 8px 0;
+      font-weight: 600;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      height: 30px;
+  }
+
+  /* Styling for the 360 view container */
+  #pano {
+      width: 100%;
+      height: calc(100vh - 200px); /* Full height minus header and footer */
+      background-color: #f0f0f0; /* Light background for 360 view area */
+  }
+
+  /* Fullscreen button styling */
+  #fullscreenToggle {
+      display: block;
+      margin: 20px auto;
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+  }
+
+ 
+  /* Control buttons for the scene */
+  .viewControlButton {
+      display: inline-block;
+      margin: 10px;
+  }
+
+  .viewControlButton img {
+      width: 40px;
+      height: 40px;
+  }
 
 html, body {
   width: 100%;
@@ -35,7 +101,7 @@ a, a:hover, a:active, a:visited {
 
 #pano {
   position: absolute;
-  top: 0;
+  top: z0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -792,6 +858,7 @@ body.single-scene #sceneList, body.single-scene #sceneListToggle {
 
 body.view-control-buttons .viewControlButton {
   display: block;
+  margin-bottom: 36px;
 }
 
 /* Hide controls when width is too small */

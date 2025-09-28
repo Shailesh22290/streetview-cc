@@ -15,6 +15,14 @@
  */
 'use strict';
 
+//////////////START////////////////
+
+
+
+///////////////END///////////////////////
+
+
+
 (function() {
   var Marzipano = window.Marzipano;
   var bowser = window.bowser;
@@ -136,26 +144,21 @@
   } else {
     document.body.classList.add('fullscreen-disabled');
   }
+// Set handler for scene list toggle.
+sceneListToggleElement.addEventListener('click', toggleSceneList);
 
-  // Set handler for scene list toggle.
-  sceneListToggleElement.addEventListener('click', toggleSceneList);
+// Remove the initial showSceneList() call for desktop
+// This will keep the scene list closed by default on all devices
 
-  // Start with the scene list open on desktop.
-  if (!document.body.classList.contains('mobile')) {
-    showSceneList();
-  }
-
-  // Set handler for scene switch.
-  scenes.forEach(function(scene) {
-    var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
-    el.addEventListener('click', function() {
-      switchScene(scene);
-      // On mobile, hide scene list after selecting a scene.
-      if (document.body.classList.contains('mobile')) {
-        hideSceneList();
-      }
-    });
+// Set handler for scene switch.
+scenes.forEach(function(scene) {
+  var el = document.querySelector('#sceneList .scene[data-id="' + scene.data.id + '"]');
+  el.addEventListener('click', function() {
+    switchScene(scene);
+    // Hide scene list after selecting a scene on all devices
+    hideSceneList();
   });
+});
 
   // DOM elements for view controls.
   var viewUpElement = document.querySelector('#viewUp');

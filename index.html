@@ -1,387 +1,145 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Project Title</title>
-<meta charset="utf-8">
-<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
-<style> 
-@-ms-viewport { width: device-width; } 
-</style>
-<link rel="stylesheet" href="vendor/reset.min.css">
-<link rel="stylesheet" href="style.css">
-</head>
-<body class="multiple-scenes view-control-buttons">
-<div>
+ 
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   
+  <title> IISER BHOPAL</title>
+  <link rel="icon" type="images/x-icon" href="../../images/logo-iiserb.png" />
+</head>
 
-<div id="pano"></div>
+<body class="overflow-x-hidden bg-cover-except-header-footer ">
 
-<div id="sceneList">
-  <ul class="scenes">
-    
-      <a href="javascript:void(0)" class="scene" data-id="0-1">
-        <li class="text">Library and CC Front</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="1-2">
-        <li class="text">2</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="2-3">
-        <li class="text">3</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="3-5">
-        <li class="text">5</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="4-6">
-        <li class="text">6</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="5-7">
-        <li class="text">7</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="6-9">
-        <li class="text">9</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="7-10">
-        <li class="text">10</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="8-11">
-        <li class="text">11</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="9-12">
-        <li class="text">12</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="10-13">
-        <li class="text">13</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="11-14">
-        <li class="text">14</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="12-15">
-        <li class="text">15</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="13-16">
-        <li class="text">16</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="14-17">
-        <li class="text">17</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="15-18">
-        <li class="text">18</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="16-19">
-        <li class="text">19</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="17-20">
-        <li class="text">20</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="18-21">
-        <li class="text">21</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="19-22">
-        <li class="text">22</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="20-23">
-        <li class="text">23</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="21-24">
-        <li class="text">24</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="22-25">
-        <li class="text">25</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="23-26">
-        <li class="text">26</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="24-27">
-        <li class="text">27</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="25-28">
-        <li class="text">28</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="26-29">
-        <li class="text">29</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="27-30">
-        <li class="text">30</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="28-31">
-        <li class="text">31</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="29-32">
-        <li class="text">32</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="30-33">
-        <li class="text">33</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="31-34">
-        <li class="text">34</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="32-36">
-        <li class="text">36</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="33-37">
-        <li class="text">37</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="34-38">
-        <li class="text">38</li>
-      </a>
-      <a href="javascript:void(0)" class="scene" data-id="0-38l">
-        <li class="text">38L</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="1-37l">
-        <li class="text">37L</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="35-39">
-        <li class="text">39</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="36-40">
-        <li class="text">40</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="37-41">
-        <li class="text">41</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="38-42">
-        <li class="text">42</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="39-43">
-        <li class="text">43</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="40-44">
-        <li class="text">44</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="41-45">
-        <li class="text">45</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="42-46">
-        <li class="text">46</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="43-47">
-        <li class="text">47</li>
-      </a>
+  
+ <!-- Top Bar -->
+ <div class="flex justify-end bg-teal-800 text-white text-sm py-1 px-4">
+    <div class="mr-6">A- A A+ | Screen Reader Access</div>
+    <div>हिंदी</div>
+  </div>
 
-      <a href="javascript:void(0)" class="scene" data-id="0-56">
-        <li class="text">56</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="1-55">
-        <li class="text">55</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="2-54">
-        <li class="text">54</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="3-53">
-        <li class="text">53</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="4-52">
-        <li class="text">52</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="5-51">
-        <li class="text">51</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="6-81">
-        <li class="text">81</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="7-80">
-        <li class="text">80</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="8-79">
-        <li class="text">79</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="9-78">
-        <li class="text">78</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="10-76">
-        <li class="text">76</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="11-75">
-        <li class="text">75</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="12-74">
-        <li class="text">74</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="13-73">
-        <li class="text">73</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="14-72">
-        <li class="text">72</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="15-71">
-        <li class="text">71</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="16-70">
-        <li class="text">70</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="17-69">
-        <li class="text">69</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="18-67">
-        <li class="text">67</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="19-66">
-        <li class="text">66</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="20-65">
-        <li class="text">65</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="21-64">
-        <li class="text">64</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="22-63">
-        <li class="text">63</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="23-62">
-        <li class="text">62</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="24-61">
-        <li class="text">61</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="25-60">
-        <li class="text">60</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="26-59">
-        <li class="text">59</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="27-58">
-        <li class="text">58</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="28-57">
-        <li class="text">57</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="29-48">
-        <li class="text">48</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="30-49">
-        <li class="text">49</li>
-      </a>
-    
-      <a href="javascript:void(0)" class="scene" data-id="31-50">
-        <li class="text">50</li>
-      </a>
-    
-  </ul>
-</div>
+  <!-- Navbar -->
+  <nav class="flex flex-wrap items-center justify-between bg-white py-4 px-6 shadow-md">
+    <div class="flex items-center space-x-4">
+      <img src="logo.png" alt="IISER Logo" class="h-16 mx-36">
+     
+    </div>
+    <ul class="flex flex-wrap items-center space-x-6 font-semibold text-gray-700 mx-36">
+      <li><a href="#" class="hover:text-blue-600">Institute</a></li>
+      <li><a href="#" class="hover:text-blue-600">Departments</a></li>
+      <li><a href="#" class="hover:text-blue-600">Research</a></li>
+      <li><a href="#" class="hover:text-blue-600">Students</a></li>
+      <li><a href="#" class="hover:text-blue-600">International Relations</a></li>
+    </ul>
+  </nav>
 
-<div id="titleBar">
-  <h1 class="header">Library and Computer Centre Street View</h1>
-  <h1 class="sceneName"></h1>
-</div>
+  <!-- Announcement Banner -->
+  <div class="bg-green-900 text-white text-sm py-2 px-4 flex items-center justify-center ">
+    <span class="mr-2">IISER Admission 2025 |</span>
+    <a href="#" class="text-yellow-300 font-semibold mx-1">Walk-In Interview</a>
+    <a href="#" class="text-cyan-300 font-semibold mx-1">Summer Internship Program 2025</a>
+  </div>
 
-<a href="javascript:void(0)" id="autorotateToggle">
-  <img class="icon off" src="img/play.png">
-  <img class="icon on" src="img/pause.png">
-</a>
+  <!-- Hero Section -->
+  <div class="flex flex-wrap p-8 bg-white md:px-36 py-8">
+    <div class="w-full lg:w-2/3">
+      <img src="republic_day_2025.png" alt="Hero Image" class="rounded shadow">
+    </div>
+    <div class="w-full lg:w-1/3 px-6">
+      <h2 class="text-xl font-semibold text-green-700 mb-2">DIRECTOR'S MESSAGE</h2>
+      <div class="flex flex-col items-center">
+        <img src="Professor_Gobardhan_Das.png" alt="Director" class="w-72 rounded-lg mb-2">
+        <p class="text-sm text-justify">A very warm welcome to IISER Bhopal. It is my great pleasure to introduce you to this premier Institute of Excellence (IoE) in Education and Research, situated in the heart of India...</p>
+        <a href="#" class="text-red-600 text-sm mt-1">Read more</a>
+      </div>
+    </div>
+  </div>
 
-<a href="javascript:void(0)" id="fullscreenToggle">
-  <img class="icon off" src="img/fullscreen.png">
-  <img class="icon on" src="img/windowed.png">
-</a>
+  <div class="max-w-7xl mx-auto bg-white p-6 rounded-lg shadow">
+    <div class="flex flex-col lg:flex-row gap-6">
+      
+      <!-- Left: Research Highlights -->
+      <div class="w-full lg:w-2/3">
+        <h2 class="text-xl font-semibold text-teal-700 mb-4">RESEARCH HIGHLIGHTS</h2>
+        <div class="border-l-2 border-gray-300 pl-4 space-y-6">
 
-<a href="javascript:void(0)" id="sceneListToggle">
-  <img class="icon off" src="img/expand.png">
-  <img class="icon on" src="img/collapse.png">
-</a>
+          <!-- Item -->
+          <div class="relative">
+            <div class="absolute -left-6 top-1">
+              <div class="w-6 h-6 bg-blue-500 text-white flex items-center justify-center rounded-full">@</div>
+            </div>
+            <p>
+              <span class="font-medium">Intriguing Facets of Solution Processable Cross-Linked Porous Organic Polymers</span>
+              <a href="#" class="text-red-600">..More Details</a>
+            </p>
+          </div>
 
-<a href="javascript:void(0)" id="viewUp" class="viewControlButton viewControlButton-1">
-  <img class="icon" src="img/up.png">
-</a>
-<a href="javascript:void(0)" id="viewDown" class="viewControlButton viewControlButton-2">
-  <img class="icon" src="img/down.png">
-</a>
-<a href="javascript:void(0)" id="viewLeft" class="viewControlButton viewControlButton-3">
-  <img class="icon" src="img/left.png">
-</a>
-<a href="javascript:void(0)" id="viewRight" class="viewControlButton viewControlButton-4">
-  <img class="icon" src="img/right.png">
-</a>
-<a href="javascript:void(0)" id="viewIn" class="viewControlButton viewControlButton-5">
-  <img class="icon" src="img/plus.png">
-</a>
-<a href="javascript:void(0)" id="viewOut" class="viewControlButton viewControlButton-6">
-  <img class="icon" src="img/minus.png">
-</a>
-</div>
-<footer>
-  <p>&copy; 2025 IISER Bhopal. All Rights Reserved.</p>
-</footer>
+          <div class="relative">
+            <div class="absolute -left-6 top-1">
+              <div class="w-6 h-6 bg-blue-500 text-white flex items-center justify-center rounded-full">@</div>
+            </div>
+            <p>
+              Coherent optical interactions with high-intensity light
+              <a href="#" class="text-red-600">..More Details</a>
+            </p>
+          </div>
 
-<script src="vendor/screenfull.min.js" ></script>
-<script src="vendor/bowser.min.js" ></script>
-<script src="vendor/marzipano.js" ></script>
+          <div class="relative">
+            <div class="absolute -left-6 top-1">
+              <div class="w-6 h-6 bg-blue-500 text-white flex items-center justify-center rounded-full">@</div>
+            </div>
+            <p>
+              Improving code-mixed Hate Detection by native sample mixing
+              <a href="#" class="text-red-600">..More Details</a>
+            </p>
+          </div>
 
-<script src="data.js"></script>
-<script src="index.js"></script>
+          <div class="relative">
+            <div class="absolute -left-6 top-1">
+              <div class="w-6 h-6 bg-blue-500 text-white flex items-center justify-center rounded-full">@</div>
+            </div>
+            <p>
+              Investigating human-induced hydrological changes in the largest Indian peninsular basin
+              <a href="#" class="text-red-600">..More Details</a>
+            </p>
+          </div>
 
+          <div class="relative">
+            <div class="absolute -left-6 top-1">
+              <div class="w-6 h-6 bg-blue-500 text-white flex items-center justify-center rounded-full">@</div>
+            </div>
+            <p>
+              A multi-aggregation approach to estimate avalanche vulnerability and suggest phase-wise adaptation
+              <a href="#" class="text-red-600">..More Details</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-1/3 relative group">
+        <h2 class="text-xl font-semibold text-teal-700 mb-4">Virtual Campus Tour</h2>
+        <a href="streetview.html">
+          <div class="aspect-w-16 aspect-h-9 relative overflow-hidden">
+            <img src="image.png" alt="Hero Image" class="rounded shadow w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+            
+            <!-- Button for desktop (appears on hover) -->
+            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-30 rounded hidden md:block">
+              <span class="bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded transition-colors duration-200">
+                View Now
+              </span>
+            </div>
+            
+            <!-- Button for mobile (always visible) -->
+            <div class="absolute bottom-4 right-4 md:hidden">
+              <span class="bg-teal-600 hover:bg-teal-700 text-white font-medium py-2 px-4 rounded transition-colors duration-200">
+                View Now
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
